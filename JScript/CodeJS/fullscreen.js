@@ -1,5 +1,5 @@
 ﻿/*
-* 全屏切换，在Chrome下支持
+* 全螢幕切換，在Chrome下支援
 * 2015-1-28，北京
 */
 function fullscreen() {

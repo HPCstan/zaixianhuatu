@@ -127,7 +127,7 @@ var Dragdrop = function (evt) {
         elem.onMove         = options.onmove    || function () {};
         elem.onStop         = options.onstop    || function () {};
 
-        elem.style.left     = elem.offsetLeft-100 + 'px';//参考线生成起始位置
+        elem.style.left     = elem.offsetLeft-100 + 'px';//鍙冭�冪窔鐢熸垚璧峰浣嶇疆
         elem.style.top      = elem.offsetTop -100+ 'px';
 
         elem.unselectable   = 'on';

@@ -1,6 +1,6 @@
-﻿//键盘快捷键
+﻿//鍵盤快捷鍵
 
-//文件菜单
+//檔案選單
 Mousetrap.bind('alt+f', function (e) {
     if (e.preventDefault) {
         e.preventDefault();
@@ -16,23 +16,23 @@ Mousetrap.bind('alt+f', function (e) {
 
 });
 
-//#region 文件
+//#region 檔案
 
-//打开
+//開啟
 Mousetrap.bind('ctrl+g', function (e) {
     fileOpen();
 });
 
-//获取
+//取得
 Mousetrap.bind('ctrl+m', function (e) {
     imgFromCamera();
 });
 
 //#endregion
 
-//#region 编辑
+//#region 編輯
 
-//撤销
+//撤銷
 Mousetrap.bind('ctrl+z', function (e) {
     undo();
 });
@@ -44,7 +44,7 @@ Mousetrap.bind('ctrl+y', function (e) {
 
 //清空
 Mousetrap.bind('ctrl+q', function (e) {
-    $.messager.confirm('确定', '确定清空当前画布？', function (r) {
+    $.messager.confirm('確定', '確定清空當前畫布？', function (r) {
         if (r) {
             reset();
         }
@@ -70,12 +70,12 @@ Mousetrap.bind('ctrl+shift+b', function (e) {
     blur();
 });
 
-//雾化
+//霧化
 Mousetrap.bind('ctrl+shift+m', function (e) {
     wuhuaView();
 });
 
-//锐化
+//銳化
 Mousetrap.bind('ctrl+shift+s', function (e) {
     sharpen();
 });
@@ -90,12 +90,12 @@ Mousetrap.bind('ctrl+shift+t', function (e) {
     conslateSoft();
 });
 
-//油画
+//油畫
 Mousetrap.bind('ctrl+shift+p', function (e) {
     conslatepainting();
 });
 
-//积木
+//積木
 Mousetrap.bind('ctrl+shift+d', function (e) {
     conslatewood();
 });
@@ -105,22 +105,22 @@ Mousetrap.bind('ctrl+shift+v', function (e) {
     diaokeView();
 });
 
-//怀旧
+//懷舊
 Mousetrap.bind('ctrl+shift+o', function (e) {
     turnOld();
 });
 
-//红色蒙版
+//紅色蒙版
 Mousetrap.bind('ctrl+shift+r', function (e) {
     turnRed();
 });
 
-//绿色蒙版
+//綠色蒙版
 Mousetrap.bind('ctrl+shift+g', function (e) {
     turnGreen();
 });
 
-//蓝色蒙版
+//藍色蒙版
 Mousetrap.bind('ctrl+shift+b', function (e) {
     turnBlue();
 });
@@ -129,12 +129,12 @@ Mousetrap.bind('ctrl+shift+b', function (e) {
 
 //#region工具箱
 
-//选择工具
+//選擇工具
 Mousetrap.bind('s', function (e) {
     $("#btnSelect").click();
 });
 
-//移动工具
+//移動工具
 Mousetrap.bind('m', function (e) {
     $("#btnMove").click();
 });
@@ -144,7 +144,7 @@ Mousetrap.bind('a', function (e) {
     $("#btnLasso").click();
 });
 
-//缩放工具
+//縮放工具
 Mousetrap.bind('z', function (e) {
     $("#btnZoomAll").click();
 });
@@ -159,17 +159,17 @@ Mousetrap.bind('f', function (e) {
     $("#btnFill").click();
 });
 
-//渐变工具
+//漸變工具
 Mousetrap.bind('n', function (e) {
     $("#btnGradient").click();
 });
 
-//画笔
+//畫筆
 Mousetrap.bind('b', function (e) {
     $("#btnPaintBrush").click();
 });
 
-//铅笔
+//鉛筆
 Mousetrap.bind('p', function (e) {
     $("#btnPaintBrush").click();
 });
@@ -179,7 +179,7 @@ Mousetrap.bind('e', function (e) {
     $("#btnEraser").click();
 });
 
-//放大镜
+//放大鏡
 Mousetrap.bind('o', function (e) {
     $("#btnZoomMiro").click();
 });
@@ -194,12 +194,12 @@ Mousetrap.bind('t', function (e) {
     $("#btnText").click();
 });
 
-//直线
+//直線
 Mousetrap.bind('l', function (e) {
     $("#btnLine").click();
 });
 
-//曲线
+//曲線
 Mousetrap.bind('v', function (e) {
     $("#btnCurve").click();
 });
@@ -209,7 +209,7 @@ Mousetrap.bind('r', function (e) {
     $("#btnRectangle").click();
 });
 
-//椭圆
+//橢圓
 Mousetrap.bind('i', function (e) {
     $("#btnEllipse").click();
 });
@@ -219,17 +219,17 @@ Mousetrap.bind('g', function (e) {
     $("#btnTriangle").click();
 });
 
-//多边形
+//多邊形
 Mousetrap.bind('y', function (e) {
     $("#btnPolygon").click();
 });
 
-//其他形状
+//其他形狀
 Mousetrap.bind('w', function (e) {
     $("#btnOtherShap").click();
 });
 
-//图章
+//圖章
 Mousetrap.bind('x', function (e) {
     $("#btnClone").click();
 });
@@ -241,14 +241,14 @@ Mousetrap.bind('d', function (e) {
 
 //#endregion
 
-//#region视图
+//#region檢視
 
 //放大
 Mousetrap.bind('ctrl+up', function (e) {
     transforms.zoomin();
 });
 
-//缩小
+//縮小
 Mousetrap.bind('ctrl+down', function (e) {
     transforms.zoomout();
 });
@@ -257,7 +257,7 @@ Mousetrap.bind('ctrl+down', function (e) {
 
 //#region
 
-//帮助文档
+//說明文件
 Mousetrap.bind('ctrl+f1', function (e) {
     window.open("Help.htm");
 });

@@ -1,36 +1,36 @@
 if ($.fn.pagination){
 	$.fn.pagination.defaults.beforePageText = '第';
-	$.fn.pagination.defaults.afterPageText = '共{pages}页';
-	$.fn.pagination.defaults.displayMsg = '显示{from}到{to},共{total}记录';
+	$.fn.pagination.defaults.afterPageText = '共{pages}頁';
+	$.fn.pagination.defaults.displayMsg = '顯示{from}到{to},共{total}記錄';
 }
 if ($.fn.datagrid){
-	$.fn.datagrid.defaults.loadMsg = '正在处理，请稍待。。。';
+	$.fn.datagrid.defaults.loadMsg = '正在處理，請稍候。。。';
 }
 if ($.fn.treegrid && $.fn.datagrid){
 	$.fn.treegrid.defaults.loadMsg = $.fn.datagrid.defaults.loadMsg;
 }
 if ($.messager){
-	$.messager.defaults.ok = '确定';
+	$.messager.defaults.ok = '確定';
 	$.messager.defaults.cancel = '取消';
 }
 if ($.fn.validatebox){
-	$.fn.validatebox.defaults.missingMessage = '该输入项为必输项';
-	$.fn.validatebox.defaults.rules.email.message = '请输入有效的电子邮件地址';
-	$.fn.validatebox.defaults.rules.url.message = '请输入有效的URL地址';
-	$.fn.validatebox.defaults.rules.length.message = '输入内容长度必须介于{0}和{1}之间';
-	$.fn.validatebox.defaults.rules.remote.message = '请修正该字段';
+	$.fn.validatebox.defaults.missingMessage = '該輸入項為必輸項';
+	$.fn.validatebox.defaults.rules.email.message = '請輸入有效的電子郵件地址';
+	$.fn.validatebox.defaults.rules.url.message = '請輸入有效的URL地址';
+	$.fn.validatebox.defaults.rules.length.message = '輸入內容長度必須介於{0}和{1}之間';
+	$.fn.validatebox.defaults.rules.remote.message = '請修正該欄位';
 }
 if ($.fn.numberbox){
-	$.fn.numberbox.defaults.missingMessage = '该输入项为必输项';
+	$.fn.numberbox.defaults.missingMessage = '該輸入項為必輸項';
 }
 if ($.fn.combobox){
-	$.fn.combobox.defaults.missingMessage = '该输入项为必输项';
+	$.fn.combobox.defaults.missingMessage = '該輸入項為必輸項';
 }
 if ($.fn.combotree){
-	$.fn.combotree.defaults.missingMessage = '该输入项为必输项';
+	$.fn.combotree.defaults.missingMessage = '該輸入項為必輸項';
 }
 if ($.fn.combogrid){
-	$.fn.combogrid.defaults.missingMessage = '该输入项为必输项';
+	$.fn.combogrid.defaults.missingMessage = '該輸入項為必輸項';
 }
 if ($.fn.calendar){
 	$.fn.calendar.defaults.weeks = ['日','一','二','三','四','五','六'];
@@ -38,9 +38,9 @@ if ($.fn.calendar){
 }
 if ($.fn.datebox){
 	$.fn.datebox.defaults.currentText = '今天';
-	$.fn.datebox.defaults.closeText = '关闭';
-	$.fn.datebox.defaults.okText = '确定';
-	$.fn.datebox.defaults.missingMessage = '该输入项为必输项';
+	$.fn.datebox.defaults.closeText = '關閉';
+	$.fn.datebox.defaults.okText = '確定';
+	$.fn.datebox.defaults.missingMessage = '該輸入項為必輸項';
 	$.fn.datebox.defaults.formatter = function(date){
 		var y = date.getFullYear();
 		var m = date.getMonth()+1;

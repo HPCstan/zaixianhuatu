@@ -1,55 +1,55 @@
-﻿//#region 更换皮肤
+﻿//#region 更換皮膚
 
-//更换皮肤
+//更換皮膚
 function onChangeTheme(theme) {
     switch (theme) {
         case 'default':
-            //该项为选中状态
+            //該項為選中狀態
             $('#default').css("background-color", "#C9D3E2");
-            //其他为非选中状态
+            //其他為非選中狀態
             $('#bootstrap').css("background-color", "");
             $('#metro-blue').css("background-color", "");
             $('#metro-green').css("background-color", "");
             $('#metro-red').css("background-color", "");
             break;
         case 'bootstrap':
-            //该项为选中状态
+            //該項為選中狀態
             $('#bootstrap').css("background-color", "#C9D3E2");
-            //其他为非选中状态
+            //其他為非選中狀態
             $('#default').css("background-color", "");
             $('#metro-blue').css("background-color", "");
             $('#metro-green').css("background-color", "");
             $('#metro-red').css("background-color", "");
             break;
         case 'metro-blue':
-            //该项为选中状态
+            //該項為選中狀態
             $('#metro-blue').css("background-color", "#C9D3E2");
-            //其他为非选中状态
+            //其他為非選中狀態
             $('#bootstrap').css("background-color", "");
             $('#default').css("background-color", "");
             $('#metro-green').css("background-color", "");
             $('#metro-red').css("background-color", "");
             break;
         case 'metro-green':
-            //该项为选中状态
+            //該項為選中狀態
             $('#metro-green').css("background-color", "#C9D3E2");
-            //其他为非选中状态
+            //其他為非選中狀態
             $('#bootstrap').css("background-color", "");
             $('#metro-blue').css("background-color", "");
             $('#default').css("background-color", "");
             $('#metro-red').css("background-color", "");
             break;
         case 'metro-red':
-            //该项为选中状态
+            //該項為選中狀態
             $('#metro-red').css("background-color", "#C9D3E2");
-            //其他为非选中状态
+            //其他為非選中狀態
             $('#bootstrap').css("background-color", "");
             $('#metro-blue').css("background-color", "");
             $('#metro-green').css("background-color", "");
             $('#default').css("background-color", "");
             break;
     }
-    //更换皮肤
+    //更換皮膚
     var link = $('#content').find('link:first');
     link.attr('href', 'JScript/jquery-easyui/themes/' + theme + '/easyui.css');
 }

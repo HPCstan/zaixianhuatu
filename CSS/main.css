@@ -1,5 +1,5 @@
 ﻿
-/*Main.aspx的样式*/
+/*Main.aspx的樣式*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote
 {
     margin: 0;
@@ -8,7 +8,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 
 *
 {
-    font-family: "微软雅黑";
+    font-family: "微軟雅黑";
     font-size: 13px;
 }
 
@@ -46,7 +46,7 @@ h2
     margin: 3px;
 }
 
-/*begin--------------------菜单下面的选项区------------------------
+/*begin--------------------選單下面的選項區------------------------
  *2014-6-4
  *yf
  */
@@ -68,15 +68,15 @@ h2
         }
 
 
-/*end--------------------菜单下面的选项区------------------------*/
+/*end--------------------選單下面的選項區------------------------*/
 
-/*html原始的输入框*/
+/*html原始的輸入框*/
 .txtInputStyle
 {
     border: 1px solid #95B8E7;
 }
 
-/*画布阴影效果及样式*/
+/*畫布陰影效果及樣式*/
 .drawWindow
 {
     background-color: White;
@@ -87,16 +87,16 @@ h2
     box-shadow: 3px 3px 4px #95B8E7;
 }
 
-/*begin------------------画布--------------------------------------
+/*begin------------------畫布--------------------------------------
 */
-#showcanvas /*最终展示画布在最外层*/
+#showcanvas /*最終展示畫布在最外層*/
 {
     z-index: 2;
     border: 1px solid gray;
     cursor: crosshair;
 }
 
-#tempcanvas /*临时画布在内层*/
+#tempcanvas /*臨時畫布在內層*/
 {
     z-index: 1;
     background-color: White;
@@ -105,7 +105,7 @@ h2
 }
 
 #gridcanvas
-{ /*网格画布*/
+{ /*網格畫布*/
     cursor: crosshair;
 }
 
@@ -115,25 +115,25 @@ h2
 }
 
 .newCanvas
-{ /*新增的图层*/
+{ /*新增的圖層*/
     border: 1px solid gray;
     cursor: crosshair;
 }
-/*end------------------画布------------------------------------
+/*end------------------畫布------------------------------------
 
-/*协同处理下的表情*/
+/*協同處理下的表情*/
 #mnfaces img:hover, #mnfacesgrp img:hover
 {
     border: 1px solid #083C86;
 }
 
-/*快捷键样式*/
+/*快捷鍵樣式*/
 .quickevent
 {
     margin-left: 50px;
 }
 
-/*快捷键效果处理样式*/
+/*快捷鍵效果處理樣式*/
 .quickeventeffect
 {
     margin-left: 20px;

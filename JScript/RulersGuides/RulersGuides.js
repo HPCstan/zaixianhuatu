@@ -44,7 +44,7 @@
 var RulersGuides = function (evt, dragdrop) {
     'use strict';
 
-    //#region ¶¨Òå±äÁ¿¡¢·½·¨
+    //#region å®šç¾©è®Šæ•¸ã€æ–¹æ³•
 
     var doc = document.documentElement,
         body = document.body,
@@ -63,7 +63,7 @@ var RulersGuides = function (evt, dragdrop) {
         guides = {},
         guidesCnt = 0,
         gUid = '',
-        rulerStatus = 0,//ÊÇ·ñÏÔÊ¾±ê³ß£¨¿ª¹Ø£©
+        rulerStatus = 0,//æ˜¯å¦é¡¯ç¤ºæ¨™å°ºï¼ˆé–‹é—œï¼‰
         guideStatus = 1,
         hBound = 0,
         vBound = 0,
@@ -317,10 +317,10 @@ var RulersGuides = function (evt, dragdrop) {
                         cancelBtnTxt = text.cloneNode(false),
                         delBtnTxt = text.cloneNode(false);
 
-                    titleBarTxt.nodeValue = '´ò¿ªÍø¸ñ';
-                    okBtnTxt.nodeValue = 'È·¶¨';
-                    cancelBtnTxt.nodeValue = 'È¡Ïû';
-                    delBtnTxt.nodeValue = 'É¾³ı';
+                    titleBarTxt.nodeValue = 'é–‹å•Ÿç¶²æ ¼';
+                    okBtnTxt.nodeValue = 'ç¢ºå®š';
+                    cancelBtnTxt.nodeValue = 'å–æ¶ˆ';
+                    delBtnTxt.nodeValue = 'åˆªé™¤';
 
                     dialog.className = 'dialog open-dialog';
                     titleBar.className = 'title-bar';
@@ -346,7 +346,7 @@ var RulersGuides = function (evt, dragdrop) {
                     body.appendChild(dialog);
 
                     evt.attach('click', delBtn, function () {
-                        if (window.confirm('È·¶¨£¿')) {
+                        if (window.confirm('ç¢ºå®šï¼Ÿ')) {
                             if (select.options.length > 0) {
                                 removeGrid(select.options[select.selectedIndex].value);
 
@@ -417,7 +417,7 @@ var RulersGuides = function (evt, dragdrop) {
                 gridName = '';
 
             while (gridName === '' && guidesCnt > 0) {
-                gridName = window.prompt('Íø¸ñ±£´æÎª£º');
+                gridName = window.prompt('ç¶²æ ¼å„²å­˜ç‚ºï¼š');
 
                 if (gridName !== '' && gridName !== false && gridName !== null && window.localStorage) {
                     for (i in guides) {
@@ -593,43 +593,43 @@ var RulersGuides = function (evt, dragdrop) {
                 status = 0,
                 toggles = {},
                 menuItemsList = [{
-                    'text': 'Òş²Ø±ê³ß',
+                    'text': 'éš±è—æ¨™å°º',
                     'hotkey': 'Ctrl + Alt + R',
                     'alias': 'rulers'
                 }, {
-                    'text': 'Òş²Ø²Î¿¼Ïß',
+                    'text': 'éš±è—åƒè€ƒç·š',
                     'hotkey': 'Ctrl + Alt + G',
                     'alias': 'guides'
                 }, {
-                    'text': 'Òş²ØËùÓĞ',
+                    'text': 'éš±è—æ‰€æœ‰',
                     'hotkey': 'Ctrl + Alt + A',
                     'alias': 'all'
                 }, {
-                    'text': '½âËø²Î¿¼Ïß',
+                    'text': 'è§£é–åƒè€ƒç·š',
                     'hotkey': 'Ctrl + Alt + L',
                     'alias': 'lock'
                 }, {
-                    'text': 'Çå³ıËùÓĞ²Î¿¼Ïß',
+                    'text': 'æ¸…é™¤æ‰€æœ‰åƒè€ƒç·š',
                     'hotkey': 'Ctrl + Alt + D',
                     'alias': 'clear'
                 }, {
-                    'text': '´ò¿ªÍø¸ñ',
+                    'text': 'é–‹å•Ÿç¶²æ ¼',
                     'hotkey': 'Ctrl + Alt + O',
                     'alias': 'open'
                 }, {
-                    'text': '±£´æÍø¸ñ',
+                    'text': 'å„²å­˜ç¶²æ ¼',
                     'hotkey': 'Ctrl + Alt + G',
                     'alias': 'save'
                 }, {
-                    'text': 'ÉèÖÃ²Î¿¼Ïß¼ä¸ô',
+                    'text': 'è¨­å®šåƒè€ƒç·šé–“éš”',
                     'hotkey': 'Ctrl + Alt + C',
                     'alias': 'snap'
                 }, {
-                    'text': 'ÏÔÊ¾ÏêÏ¸ĞÅÏ¢',
+                    'text': 'é¡¯ç¤ºè©³ç´°è³‡è¨Š',
                     'hotkey': 'Ctrl + Alt + I',
                     'alias': 'details'
                 }, {
-                    'text': 'ÉèÖÃÎª½çÃæµÄ¼ä¸ô',
+                    'text': 'è¨­å®šç‚ºä»‹é¢çš„é–“éš”',
                     'hotkey': 'Ctrl + Alt + E',
                     'alias': 'snapdom'
                 }],
@@ -637,7 +637,7 @@ var RulersGuides = function (evt, dragdrop) {
 
             this.render = function () {
                 menuBtn = document.createElement('div');
-                menuBtn.title = "±ê³ß²Ëµ¥";
+                menuBtn.title = "æ¨™å°ºé¸å–®";
                 menuBtn.className = 'menu-btn unselectable';
                 menuBtn.appendChild(document.createTextNode('\u250C'));
 
@@ -744,8 +744,8 @@ var RulersGuides = function (evt, dragdrop) {
 
                 evt.attach('mousedown', menuBtn, function () {
                     toggles.rulers.txt.nodeValue = (rulerStatus === 1)
-                        ? 'Òş²Ø±ê³ß'
-                        : 'ÏÔÊ¾±ê³ß';
+                        ? 'éš±è—æ¨™å°º'
+                        : 'é¡¯ç¤ºæ¨™å°º';
 
                     if (guidesCnt > 0) {
                         toggles.guides.obj.className = '';
@@ -753,8 +753,8 @@ var RulersGuides = function (evt, dragdrop) {
                         toggles.save.obj.className = '';
 
                         toggles.guides.txt.nodeValue = (guideStatus === 1)
-                            ? 'Òş²Ø²Î¿¼Ïß'
-                            : 'ÏÔÊ¾²Î¿¼Ïß';
+                            ? 'éš±è—åƒè€ƒç·š'
+                            : 'é¡¯ç¤ºåƒè€ƒç·š';
                     } else {
                         toggles.guides.obj.className = 'disabled';
                         toggles.clear.obj.className = 'disabled';
@@ -762,12 +762,12 @@ var RulersGuides = function (evt, dragdrop) {
                     }
 
                     toggles.all.txt.nodeValue = (rulerStatus === 1 || guideStatus === 1)
-                        ? 'Òş²ØËùÓĞ'
-                        : 'ÏÔÊ¾ËùÓĞ';
+                        ? 'éš±è—æ‰€æœ‰'
+                        : 'é¡¯ç¤ºæ‰€æœ‰';
 
-                    toggles.lock.txt.nodeValue = (locked === 0) ? 'Ëø¶¨±ê³ß' : '½âËø±ê³ß';
-                    toggles.details.txt.nodeValue = (detailsStatus === 0) ? 'ÏÔÊ¾ÏêÏ¸ĞÅÏ¢' : 'Òş²ØÏêÏ¸ĞÅÏ¢';
-                    toggles.snapdom.txt.nodeValue = (snapDom === 0) ? 'ÉèÖÃÎª½çÃæµÄ¼ä¸ô' : 'È¡ÏûÉèÖÃÎª½çÃæµÄ¼ä¸ô';
+                    toggles.lock.txt.nodeValue = (locked === 0) ? 'é–å®šæ¨™å°º' : 'è§£é–æ¨™å°º';
+                    toggles.details.txt.nodeValue = (detailsStatus === 0) ? 'é¡¯ç¤ºè©³ç´°è³‡è¨Š' : 'éš±è—è©³ç´°è³‡è¨Š';
+                    toggles.snapdom.txt.nodeValue = (snapDom === 0) ? 'è¨­å®šç‚ºä»‹é¢çš„é–“éš”' : 'å–æ¶ˆè¨­å®šç‚ºä»‹é¢çš„é–“éš”';
                     toggles.open.obj.className = (gridListLen > 0) ? '' : 'disabled';
 
                     menuList.style.display = (status === 0) ? 'inline-block' : 'none';
@@ -814,12 +814,12 @@ var RulersGuides = function (evt, dragdrop) {
                         resetBtnTxt = text.cloneNode(false),
                         cancelBtnTxt = text.cloneNode(false);
 
-                    titleBarTxt.nodeValue = 'ÉèÖÃ²Î¿¼Ïß¼ä¸ô';
+                    titleBarTxt.nodeValue = 'è¨­å®šåƒè€ƒç·šé–“éš”';
                     xLabelTxt.nodeValue = 'X';
                     yLabelTxt.nodeValue = 'Y';
-                    okBtnTxt.nodeValue = 'È·¶¨';
-                    resetBtnTxt.nodeValue = 'ÖØÖÃ';
-                    cancelBtnTxt.nodeValue = 'È¡Ïû';
+                    okBtnTxt.nodeValue = 'ç¢ºå®š';
+                    resetBtnTxt.nodeValue = 'é‡ç½®';
+                    cancelBtnTxt.nodeValue = 'å–æ¶ˆ';
 
                     dialog.className = 'dialog snap-dialog';
                     titleBar.className = 'title-bar';
@@ -953,12 +953,12 @@ var RulersGuides = function (evt, dragdrop) {
 
     //#endregion
 
-    //ÆğÊ¼º¯Êı
+    //èµ·å§‹å‡½å¼
     prepare();
 
     this.status = 1;
 
-    //Òş²Ø±ê³ß°´Å¥ºÍ±ê³ß
+    //éš±è—æ¨™å°ºæŒ‰éˆ•å’Œæ¨™å°º
     this.enable = function () {
         if (vRuler !== null) {
             vRuler.style.display = 'block';
@@ -971,7 +971,7 @@ var RulersGuides = function (evt, dragdrop) {
         this.status = 1;
     };
 
-    //ÏÔÊ¾±ê³ß°´Å¥ºÍ±ê³ß
+    //é¡¯ç¤ºæ¨™å°ºæŒ‰éˆ•å’Œæ¨™å°º
     this.disable = function () {
         if (vRuler !== null) {
             deleteGuides();
@@ -986,7 +986,7 @@ var RulersGuides = function (evt, dragdrop) {
         this.status = 0;
     };
 
-    //#region °ó¶¨ÊÂ¼ş
+    //#region ç¹«çµäº‹ä»¶
 
     evt.attach('mousedown', document, function (e, src) {
         var x = e.clientX,

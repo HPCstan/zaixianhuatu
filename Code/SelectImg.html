@@ -1,11 +1,12 @@
-﻿<!--名称：图片选择。
-    功能：文件》打开。进行图片选择。
+﻿<!--名稱：圖片選擇。
+    功能：檔案》開啟。進行圖片選擇。
     作者：Tim
-    时间：2014-08-03-->
+    時間：2014-08-03-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>图片选择</title>
+    <meta charset="utf-8"/>
+    <title>圖片選擇</title>
     <link href="../JScript/jquery-easyui/themes/default/easyui.css" rel="stylesheet"
         type="text/css" />
     <link rel="shortcut icon" href="../Images/log.ico" />
@@ -55,9 +56,9 @@
 </head>
 <body>
     <div class="easyui-tabs" data-options="fit:true">
-        <div id="serverimg" title="附带图片">
+        <div id="serverimg" title="附帶圖片">
             <p style="margin-left: 27px; margin-top: 7px; margin-bottom: 5px;">
-                选择图片：
+                選擇圖片：
             </p>
             <div id="showlselimg">
                 <table id='allimgs'>
@@ -122,33 +123,33 @@
                 </table>
             </div>
             <div style="margin-left: 27px; margin-top: 7px; margin-bottom: 5px;">
-                图片名：
+                圖片名：
                 <input id="txtImgName" type="text" style="width: 250px; border: 1px solid #26A0DA;" />
-                <a id="btnSelImgSure" onclick="Sure();" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">确定</a> <a id="btnSelImgCancel" onclick="Cancel();" href="#" class="easyui-linkbutton"
+                <a id="btnSelImgSure" onclick="Sure();" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">確定</a> <a id="btnSelImgCancel" onclick="Cancel();" href="#" class="easyui-linkbutton"
                     data-options="iconCls:'icon-cancel'">取消</a>
             </div>
         </div>
     </div>
 </body>
 <script type="text/javascript">
-    var imgSrc = ""; //图片路径
+    var imgSrc = ""; //圖片路徑
     var timer = null;
     $('#showlselimg img').live('click', function (event) {
         timer && clearTimeout(timer);
-        imgSrc = this.src;//获取图片路径，用于绘制
-        var imgTitle = $(this).siblings('p').html();//获取兄弟节点
+        imgSrc = this.src;//取得圖片路徑，用於繪製
+        var imgTitle = $(this).siblings('p').html();//取得兄弟節點
         timer = setTimeout(function () {
-            $("#txtImgName").val(imgTitle); //获取图片名称
+            $("#txtImgName").val(imgTitle); //取得圖片名稱
         }, 300);
     }).live('dblclick', function (event) {
         timer && clearTimeout(timer);
-        imgSrc = this.src; //获取图片路径，用于绘制
+        imgSrc = this.src; //取得圖片路徑，用於繪製
         var imgTitle = $(this).siblings('p').html();
-        $("#txtImgName").val(imgTitle); //获取图片名称
+        $("#txtImgName").val(imgTitle); //取得圖片名稱
         Sure();
     });
 
-    //确定
+    //確定
     function Sure() {
         var imgInfo = "{\"mark\":\"selectimg\",\"imgSrc\":\"" + imgSrc + "\"}";
         parent.closeMyWindow(imgInfo);
@@ -156,7 +157,7 @@
 
     //取消
     function Cancel() {
-        //关闭窗体
+        //關閉窗體
         parent.closeMyWindow();
     }
 </script>
